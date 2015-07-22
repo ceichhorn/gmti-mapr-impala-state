@@ -1,61 +1,48 @@
-mapr_impala Cookbook
+mapr-impala-store Cookbook
 ====================
-TODO: Enter the cookbook description here.
+This will install mapr impala statestore and catalog on a MAPR cluster. 
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
 #### packages
-- `toaster` - mapr_impala needs toaster to brown your bagel.
+- `mapr_hbase` - mapr_impala needs hbase and installs it if not present.
+'mapr_impala_statestore' - Installs mapr impala statestore.
+'mapr_impala_catalog' - Installs mapr impala catalog.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
 
-e.g.
-#### mapr_impala::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['mapr_impala']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+Overridden in the role based on the cluster you install on.
+
+default['mapr']['impala_state'] = '10.84.100.86'
+default['mapr']['impala_catalog'] = '10.84.100.86'
+default['mapr']['impala_server'] = ['10.54.101.2', '10.54.101.3']
+default['mapr']['hive'] = 'mapr-hive-0.13.201505191731-1.noarch'
+default['mapr']['hive_yum_version'] = '0.13.201505191731-1'
+default['mapr']['hive_version'] = '0.13'
+
 
 Usage
 -----
-#### mapr_impala::default
-TODO: Write usage instructions for each cookbook.
+#### mapr-impala-store::default
 
-e.g.
-Just include `mapr_impala` in your node's `run_list`:
 
-```json
+Just include `mapr-impala-store` in your node's `run_list`:
+
+
 {
   "name":"my_node",
   "run_list": [
-    "recipe[mapr_impala]"
+    "recipe[mapr-impala-store]"
   ]
 }
 ```
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write your change
@@ -65,4 +52,4 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Carl Eichhorn, Alfred Macareag, Eric Ward.
