@@ -1,4 +1,4 @@
-name 'gmti-mapr-impala-state'
+name 'mapr-impala-state'
 maintainer 'Gannett'
 maintainer_email 'ceichhorn@gannett.com'
 license 'All rights reserved'

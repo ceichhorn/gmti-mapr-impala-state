@@ -1,7 +1,7 @@
 DEPENDENCIES
-  mapr_impala-state
+  mapr-impala-state
     path: .
     metadata: true
 
 GRAPH
-  mapr_impala-state (0.0.1)
+  mapr-impala-state (0.0.1)

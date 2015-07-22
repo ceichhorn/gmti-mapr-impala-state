@@ -7,7 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# package 'mapr-hbase'
 package 'mapr-impala-catalog'
 package 'mapr-impala-statestore'
 
