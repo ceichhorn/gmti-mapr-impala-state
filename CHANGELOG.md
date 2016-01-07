@@ -3,7 +3,11 @@ mapr_impala CHANGELOG
 
 This file is used to list changes made in each version of the mapr_impala cookbook.
 
-0.1.0
+0.0.2
+-----
+- [amacaraeg] - testing changes
+
+0.0.1
 -----
 - [your_name] - Initial release of mapr_impala
 
